@@ -1,0 +1,502 @@
+[
+  {
+    "id": "1",
+    "title": "Prompt Engineering Basics",
+    "description": "Learn how to structure simple AI prompts for clarity and accuracy.",
+    "prompt": "Act as an AI tutor. Explain how prompt structure affects AI responses. Show me examples of a vague prompt vs. a precise prompt, and explain why the second works better.",
+    "category": "AI Learning",
+    "tags": ["prompting", "basics", "clarity"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "2",
+    "title": "Code Explainer",
+    "description": "Use AI to explain code step by step as if teaching a beginner.",
+    "prompt": "Act as a coding mentor. Explain this code snippet line by line, describe its purpose, and provide a simpler version for beginners.",
+    "category": "Coding",
+    "tags": ["code-explanation", "learning"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "3",
+    "title": "AI Debugging Assistant",
+    "description": "Get AI-powered help to identify and fix bugs.",
+    "prompt": "I will share broken code. Act as a debugging assistant: 1) Identify the error 2) Explain why it happens 3) Suggest a fix 4) Show corrected code.",
+    "category": "Coding",
+    "tags": ["debugging", "error-fixing"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "4",
+    "title": "Framework Learner",
+    "description": "Use AI to quickly understand a new framework or library.",
+    "prompt": "Act as a framework guide. Teach me the core concepts of [framework/library]. Provide: key features, basic setup, and one practical code example.",
+    "category": "Learning",
+    "tags": ["frameworks", "libraries", "teaching"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "5",
+    "title": "Code Style Coach",
+    "description": "Improve your code readability and consistency with AI suggestions.",
+    "prompt": "Review my code as a style coach. Suggest improvements based on clean code principles: formatting, variable naming, modularity, and consistency.",
+    "category": "Coding",
+    "tags": ["clean-code", "style", "best-practices"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "6",
+    "title": "AI Testing Partner",
+    "description": "Generate unit tests and testing strategies with AI.",
+    "prompt": "Act as a QA engineer. Generate unit tests for my function. Provide input/output test cases, edge cases, and expected outcomes.",
+    "category": "Testing",
+    "tags": ["unit-testing", "QA", "automation"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "7",
+    "title": "Documentation Generator",
+    "description": "Use AI to generate documentation from code.",
+    "prompt": "Act as a documentation writer. Generate clear, structured documentation from my code, including function purpose, parameters, return values, and usage examples.",
+    "category": "Documentation",
+    "tags": ["docs", "auto-generation", "API"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "8",
+    "title": "Code Refactorer",
+    "description": "Refactor messy code into clean, efficient, and maintainable code.",
+    "prompt": "Refactor this code. Optimize for readability, efficiency, and modularity. Explain each change briefly and provide the improved version.",
+    "category": "Coding",
+    "tags": ["refactoring", "optimization", "clean-code"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "9",
+    "title": "Data Handler",
+    "description": "Get AI to format and process data (CSV, JSON, APIs).",
+    "prompt": "Act as a data handler. Convert this dataset into JSON and CSV formats. Validate fields, handle missing data, and output clean results.",
+    "category": "Data",
+    "tags": ["data", "json", "csv", "apis"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "10",
+    "title": "AI Brainstorm Partner",
+    "description": "Use AI to generate and refine project ideas.",
+    "prompt": "Act as a brainstorming partner. Generate 5 creative project ideas in [domain]. For each idea, describe the concept, potential users, and implementation challenges.",
+    "category": "Creativity",
+    "tags": ["brainstorming", "innovation", "ideas"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+    {
+    "id": "11",
+    "title": "Daily Task Planner",
+    "description": "Generate a prioritized daily plan from your to-do list.",
+    "prompt": "Act as a productivity assistant. From my to-do list, generate a prioritized daily plan with estimated times, breaks, and must-complete tasks.",
+    "category": "Productivity",
+    "tags": ["planning", "task-management", "workflow"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "12",
+    "title": "Meeting Summarizer",
+    "description": "Turn meeting notes into clear action points.",
+    "prompt": "Act as a meeting assistant. Summarize these meeting notes into: 1) Key decisions 2) Action items 3) Deadlines.",
+    "category": "Work",
+    "tags": ["summarization", "meetings", "notes"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "13",
+    "title": "Email Polisher",
+    "description": "Rewrite emails with clarity, professionalism, and tone adjustment.",
+    "prompt": "Rewrite this draft email to be more clear, concise, and professional while maintaining a polite tone.",
+    "category": "Communication",
+    "tags": ["emails", "clarity", "tone"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "14",
+    "title": "Time Blocker",
+    "description": "Organize your week into focused time blocks.",
+    "prompt": "Act as a time management coach. Based on my weekly tasks, create a time-blocked calendar that balances deep work, meetings, and breaks.",
+    "category": "Productivity",
+    "tags": ["time-management", "calendar", "scheduling"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "15",
+    "title": "Research Assistant",
+    "description": "Summarize research papers, articles, or documents into digestible insights.",
+    "prompt": "Summarize this document into: key points, challenges, and opportunities. Output in bullet points.",
+    "category": "Research",
+    "tags": ["summaries", "reading", "papers"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "16",
+    "title": "Decision Matrix Maker",
+    "description": "Help make structured decisions with pros, cons, and weighted factors.",
+    "prompt": "Act as a decision assistant. Build a decision matrix comparing my options with pros, cons, and a final recommendation.",
+    "category": "Decision Making",
+    "tags": ["decision-matrix", "choices", "analysis"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "17",
+    "title": "Focus Mode Partner",
+    "description": "Generate focus sprints and accountability reminders.",
+    "prompt": "Guide me through a 25-minute Pomodoro focus sprint. Provide start encouragement, a midway check-in, and a wrap-up summary.",
+    "category": "Productivity",
+    "tags": ["focus", "pomodoro", "accountability"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "18",
+    "title": "Learning Path Builder",
+    "description": "Create a structured roadmap to learn a new skill.",
+    "prompt": "Act as a mentor. Build me a 4-week structured learning path for mastering [skill]. Include resources, exercises, and checkpoints.",
+    "category": "Learning",
+    "tags": ["roadmap", "skills", "study-plan"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "19",
+    "title": "Brain Dump Organizer",
+    "description": "Convert messy notes into structured knowledge.",
+    "prompt": "Organize my messy notes into categories, bullet points, and action items while keeping important details intact.",
+    "category": "Organization",
+    "tags": ["notes", "knowledge-management", "整理"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "20",
+    "title": "Project Scope Definer",
+    "description": "Turn vague project ideas into clear goals and requirements.",
+    "prompt": "Act as a project manager. Convert this project idea into: objective, requirements, risks, and success criteria.",
+    "category": "Project Management",
+    "tags": ["scope", "planning", "requirements"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  }
+  ,{
+    "id": "21",
+    "title": "API Contract Designer",
+    "description": "Use AI to design and validate API request/response structures.",
+    "prompt": "Design an API contract for [use-case]. Provide request/response structure, status codes, and error handling.",
+    "category": "Coding",
+    "tags": ["API", "contracts", "backend"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "22",
+    "title": "Code Performance Optimizer",
+    "description": "Get AI suggestions for improving performance.",
+    "prompt": "Analyze this code for performance bottlenecks. Suggest optimizations and provide improved code with benchmarks.",
+    "category": "Coding",
+    "tags": ["performance", "optimization", "efficiency"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "23",
+    "title": "System Design Helper",
+    "description": "Create high-level system design blueprints.",
+    "prompt": "Act as a system architect. Design a scalable system for [use case]. Provide architecture diagram, components, and tradeoffs.",
+    "category": "Architecture",
+    "tags": ["system-design", "scalability", "blueprints"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "24",
+    "title": "Regex Master",
+    "description": "Generate and explain complex regex patterns.",
+    "prompt": "Create a regex to match [pattern]. Explain step by step how it works and provide variations for edge cases.",
+    "category": "Coding",
+    "tags": ["regex", "patterns", "text-processing"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "25",
+    "title": "Security Auditor",
+    "description": "Check code for security vulnerabilities.",
+    "prompt": "Act as a security auditor. Review this code for vulnerabilities (XSS, SQL injection, unsafe inputs). Suggest fixes.",
+    "category": "Security",
+    "tags": ["vulnerabilities", "security", "audit"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "26",
+    "title": "Multi-language Converter",
+    "description": "Translate code between programming languages.",
+    "prompt": "Convert this [language] code into [target language]. Ensure it keeps functionality, efficiency, and idiomatic usage.",
+    "category": "Coding",
+    "tags": ["translation", "languages", "conversion"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "27",
+    "title": "Algorithm Coach",
+    "description": "Explain and implement algorithms step by step.",
+    "prompt": "Act as an algorithms tutor. Explain [algorithm] in simple terms, show pseudocode, and provide optimized implementation.",
+    "category": "Learning",
+    "tags": ["algorithms", "education", "coding"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "28",
+    "title": "Database Query Optimizer",
+    "description": "Improve SQL queries for performance and readability.",
+    "prompt": "Optimize this SQL query. Provide an explanation of indexing, joins, and restructuring for better performance.",
+    "category": "Database",
+    "tags": ["SQL", "optimization", "queries"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "29",
+    "title": "Test Coverage Improver",
+    "description": "Analyze and improve code test coverage.",
+    "prompt": "Review this test suite. Identify missing test cases, add edge cases, and provide updated unit tests.",
+    "category": "Testing",
+    "tags": ["coverage", "unit-tests", "automation"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "30",
+    "title": "DevOps Assistant",
+    "description": "Generate CI/CD pipelines and automation scripts.",
+    "prompt": "Act as a DevOps engineer. Create a CI/CD pipeline for [project]. Include build, test, deployment, and rollback strategies.",
+    "category": "DevOps",
+    "tags": ["CI/CD", "automation", "pipelines"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "31",
+    "title": "Machine Learning Primer",
+    "description": "Use AI to teach you the basics of ML concepts and workflows.",
+    "prompt": "Act as an ML instructor. Explain core ML concepts (supervised/unsupervised, training, validation) and provide a simple example workflow with code snippets.",
+    "category": "Machine Learning",
+    "tags": ["ml", "basics", "workflow"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "32",
+    "title": "NLP Task Builder",
+    "description": "Design simple natural language processing tasks and pipelines.",
+    "prompt": "Help me build an NLP pipeline for [task]. Describe preprocessing, model choice, evaluation, and sample code to get started.",
+    "category": "NLP",
+    "tags": ["nlp", "text", "pipeline"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "33",
+    "title": "Generative API Explorer",
+    "description": "Learn how to use generative AI APIs effectively and safely.",
+    "prompt": "Explain how to integrate with a generative AI API (like OpenAI). Include authentication, request examples, rate limits handling, and safety considerations.",
+    "category": "Generative AI",
+    "tags": ["api", "integration", "safety"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "34",
+    "title": "Data Visualization Assistant",
+    "description": "Create clear, informative visualizations from data.",
+    "prompt": "Act as a data viz expert. Given this dataset, suggest the best chart types, create sample code for charts, and explain what each visualization reveals.",
+    "category": "Data",
+    "tags": ["visualization", "charts", "insights"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "35",
+    "title": "Big Data Overview",
+    "description": "Get AI to explain big data concepts and tools for processing at scale.",
+    "prompt": "Explain big data tooling (Spark, Hadoop, data lakes). Provide scenarios where each is appropriate and a small example pipeline.",
+    "category": "Big Data",
+    "tags": ["spark", "hadoop", "data-lakes"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "36",
+    "title": "Web3 Starter",
+    "description": "Introduce smart contracts and blockchain basics with practical examples.",
+    "prompt": "Act as a blockchain instructor. Explain smart contracts, provide a simple Solidity smart contract example, and outline deployment steps.",
+    "category": "Web3",
+    "tags": ["blockchain", "smart-contracts", "solidity"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "37",
+    "title": "Edge & Serverless Guide",
+    "description": "Learn how to deploy lightweight code at the edge and in serverless environments.",
+    "prompt": "Explain the differences between edge functions and serverless functions. Provide a sample deployment for Cloudflare Workers or AWS Lambda and use-cases.",
+    "category": "Cloud",
+    "tags": ["serverless", "edge", "deployment"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "38",
+    "title": "Low-Code Integration",
+    "description": "Combine AI with low-code/no-code tools to automate workflows.",
+    "prompt": "Suggest ways to integrate AI in a low-code platform. Provide an example automation flow and components needed.",
+    "category": "Automation",
+    "tags": ["low-code", "nocode", "automation"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "39",
+    "title": "Ethics & Responsible AI",
+    "description": "Understand ethical considerations and mitigation strategies for AI systems.",
+    "prompt": "Act as an AI ethicist. Identify potential ethical risks for my AI project and propose mitigation strategies and testing checks.",
+    "category": "Ethics",
+    "tags": ["ethics", "bias", "responsible-ai"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "40",
+    "title": "Model Evaluation Checklist",
+    "description": "Use AI to create evaluation metrics and testing protocols for ML models.",
+    "prompt": "Create a model evaluation checklist for [use-case]. Include metrics to track, test datasets, and error analysis steps.",
+    "category": "Machine Learning",
+    "tags": ["evaluation", "metrics", "testing"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "41",
+    "title": "Portfolio Builder",
+    "description": "Get AI help to craft project descriptions and portfolio content.",
+    "prompt": "Help me write polished project descriptions for my portfolio. For each project: give context, technical stack, my role, challenges, and outcomes.",
+    "category": "Career",
+    "tags": ["portfolio", "resume", "presentation"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "42",
+    "title": "Open Source Contributor Assistant",
+    "description": "Use AI to find issues you can fix and craft PRs or issues.",
+    "prompt": "Help me find beginner-friendly open-source tasks and draft a clear issue or PR description. Include steps to reproduce and suggested fixes.",
+    "category": "Open Source",
+    "tags": ["oss", "contributions", "pull-requests"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "43",
+    "title": "Tech Talk Prep",
+    "description": "Use AI to prepare a talk, slides, and speaker notes.",
+    "prompt": "Act as a public speaking coach. Create an outline, slide titles, and speaker notes for a 20-minute talk about [topic].",
+    "category": "Communication",
+    "tags": ["public-speaking", "slides", "presentation"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "44",
+    "title": "Blog Post Writer",
+    "description": "Turn technical work into a readable blog post.",
+    "prompt": "Write a 800-word technical blog post about [project/topic]. Include an intro, technical deep-dive, code example, and conclusion with next steps.",
+    "category": "Writing",
+    "tags": ["blog", "content", "technical-writing"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "45",
+    "title": "Lesson Plan Creator",
+    "description": "Use AI to create teaching materials and exercises.",
+    "prompt": "Create a 60-minute lesson plan to teach [topic] with objectives, activities, and homework. Provide sample quiz questions.",
+    "category": "Education",
+    "tags": ["teaching", "lesson-plan", "exercises"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "46",
+    "title": "Freelance Pitch Generator",
+    "description": "Craft winning freelance proposals and client pitches.",
+    "prompt": "Act as a business development advisor. Draft a concise freelance proposal for [service] including scope, timeline, pricing, and differentiators.",
+    "category": "Freelancing",
+    "tags": ["proposals", "clients", "sales"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "47",
+    "title": "Consulting Brief Creator",
+    "description": "Use AI to create client-ready consulting briefs and roadmaps.",
+    "prompt": "Create a consulting brief for [client problem]. Include objectives, recommended solution, phases, and estimated timeline.",
+    "category": "Consulting",
+    "tags": ["brief", "roadmap", "strategy"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "48",
+    "title": "Product-Market Fit Analyzer",
+    "description": "Leverage AI to evaluate product ideas and market fit.",
+    "prompt": "Analyze this product idea for product-market fit. List target customers, key assumptions, risks, and initial experiments to validate.",
+    "category": "Product",
+    "tags": ["pmf", "validation", "experiments"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "49",
+    "title": "MVP Launch Planner",
+    "description": "Plan a minimal viable product launch with AI assistance.",
+    "prompt": "Act as a startup advisor. Create an MVP launch plan for [product] including core features, launch checklist, marketing steps, and KPIs.",
+    "category": "Startup",
+    "tags": ["mvp", "launch", "marketing"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  },
+  {
+    "id": "50",
+    "title": "Prompt Library Architect",
+    "description": "Design and curate a sustainable prompt library and contribution workflow.",
+    "prompt": "Help me design an open prompt library. Provide folder structure, contribution guidelines, metadata schema, tagging strategy, and moderation rules.",
+    "category": "Project",
+    "tags": ["prompt-library", "open-source", "governance"],
+    "author": "DevTeam",
+    "createdAt": "2025-08-18"
+  }
+]
