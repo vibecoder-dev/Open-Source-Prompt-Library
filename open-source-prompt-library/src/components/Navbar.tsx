@@ -18,14 +18,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const categories = [
-    { name: 'All', href: '/' },
-    { name: 'Coding', href: '/?category=coding' },
-    { name: 'Study', href: '/?category=study' },
-    { name: 'Career', href: '/?category=career' },
-    { name: 'Creativity', href: '/?category=creativity' },
-    { name: 'Health', href: '/?category=health' },
-  ];
+  // Categories removed as requested
 
   return (
     <>
@@ -51,32 +44,16 @@ const Navbar = () => {
             </div>
 
             {/* Desktop menu */}
-            <div className="hidden md:flex md:items-center md:space-x-1">
-              {categories.map((category, index) => (
+                          {/* Desktop Navigation */}
+              <div className="hidden sm:flex space-x-4 ml-10">
                 <Link
-                  key={category.name}
-                  href={category.href}
-                  className={`px-3 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-md transition-all duration-300
-                    hover:bg-slate-800/50 hover:shadow-inner
-                    ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'}
-                  `}
-                  style={{ transitionDelay: `${index * 100}ms` }}
+                  href="/about"
+                  className="text-slate-300 hover:text-white px-3 py-2 rounded-lg transition-all duration-300
+                    hover:bg-white/10 text-sm font-medium"
                 >
-                  {category.name}
+                  About
                 </Link>
-              ))}
-              <Link
-                href="/about"
-                className={`ml-2 px-4 py-2 text-sm font-medium text-white
-                  bg-gradient-to-r from-blue-500 to-violet-500 hover:from-blue-600 hover:to-violet-600
-                  rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20
-                  ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'}
-                `}
-                style={{ transitionDelay: `${categories.length * 100}ms` }}
-              >
-                About
-              </Link>
-            </div>
+              </div>
 
             {/* Mobile menu button */}
             <div className="flex items-center md:hidden">
@@ -108,34 +85,7 @@ const Navbar = () => {
                 <X size={20} />
               </button>
             </div>
-            <div className="flex-1 overflow-y-auto py-4 px-2">
-              {categories.map((category, index) => (
-                <Link
-                  key={category.name}
-                  href={category.href}
-                  className={`block px-4 py-3 text-base font-medium text-slate-300 hover:text-white 
-                    rounded-md transition-all duration-300 hover:bg-slate-800/50 hover:shadow-inner
-                    ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'}
-                  `}
-                  style={{ transitionDelay: `${150 + index * 50}ms` }}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {category.name}
-                </Link>
-              ))}
-              <Link
-                href="/about"
-                className={`mt-4 mx-2 block px-4 py-3 text-base font-medium text-white text-center
-                  bg-gradient-to-r from-blue-500 to-violet-500 hover:from-blue-600 hover:to-violet-600
-                  rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20
-                  ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'}
-                `}
-                style={{ transitionDelay: `${150 + categories.length * 50}ms` }}
-                onClick={() => setIsOpen(false)}
-              >
-                About
-              </Link>
-            </div>
+            
           </div>
         </div>
       </nav>

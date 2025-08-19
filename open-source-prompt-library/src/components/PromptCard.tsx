@@ -13,15 +13,24 @@ const PromptCard: React.FC<PromptCardProps> = ({ prompt, index }) => {
   const [copied, setCopied] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [copying, setCopying] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
   const copyToClipboard = async () => {
-    await navigator.clipboard.writeText(prompt.prompt);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    try {
+      await navigator.clipboard.writeText(prompt.prompt);
+      setCopied(true);
+      setCopying(true);
+      setTimeout(() => {
+        setCopied(false);
+        setCopying(false);
+      }, 1000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
   };
 
   return (
@@ -67,7 +76,8 @@ const PromptCard: React.FC<PromptCardProps> = ({ prompt, index }) => {
         </span>
         <button
           onClick={copyToClipboard}
-          className={`primary-button flex items-center gap-2 ${copied ? 'animate-pulse-glow' : ''}`}
+          className={`primary-button flex items-center gap-2 ${copying ? 'animate-shake' : ''}`}
+          disabled={copying}
         >
           {copied ? (
             <>

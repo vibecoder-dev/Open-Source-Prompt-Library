@@ -9,12 +9,18 @@ module.exports = {
     extend: {
       animation: {
         'gradient': 'gradient 8s linear infinite',
+        shake: 'shake 0.3s ease-in-out'
       },
       keyframes: {
         gradient: {
           '0%, 100%': { 'background-position': '0% 50%' },
           '50%': { 'background-position': '100% 50%' },
         },
+        shake: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '25%': { transform: 'rotate(-5deg)' },
+          '75%': { transform: 'rotate(5deg)' },
+        }
       },
       backgroundSize: {
         'size-200': '200% 200%',
