@@ -1,7 +1,7 @@
 'use client';
 
-import { Check, Copy, Sparkles } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { Check, Copy } from 'lucide-react';
+import { useState } from 'react';
 import { Prompt } from '@/types/prompt';
 
 interface PromptCardProps {
@@ -11,73 +11,52 @@ interface PromptCardProps {
 
 const PromptCard: React.FC<PromptCardProps> = ({ prompt, index }) => {
   const [copied, setCopied] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-  const [copying, setCopying] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const copyToClipboard = async () => {
+    if (copied) return; // Prevent multiple clicks while copying
     try {
       await navigator.clipboard.writeText(prompt.prompt);
       setCopied(true);
-      setCopying(true);
-      setTimeout(() => {
-        setCopied(false);
-        setCopying(false);
-      }, 1000);
+      setTimeout(() => setCopied(false), 1500);
     } catch (err) {
       console.error('Failed to copy:', err);
     }
   };
 
   return (
-    <div
-      className={`glass-effect rounded-xl p-6 card-hover relative overflow-hidden
-        ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
-        transition-all duration-500 ease-out`}
-      style={{ transitionDelay: `${index * 100}ms` }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {/* Animated gradient border */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-violet-500 to-blue-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-
-      {/* Category badge */}
-      <div className="flex items-center gap-2 mb-4">
-        <span className="px-3 py-1 text-xs font-medium text-blue-400 bg-blue-500/10 rounded-full">
+    <div className="bg-slate-800 rounded-lg p-6 shadow-lg">
+      <div className="mb-4">
+        <span className="px-2 py-1 text-xs font-medium text-blue-400 bg-blue-500/10 rounded-full">
           {prompt.category}
         </span>
-        <Sparkles className={`w-4 h-4 text-violet-400 transition-transform duration-300 ${isHovered ? 'scale-110' : 'scale-100'}`} />
       </div>
 
-      {/* Title with gradient on hover */}
-      <h3 className={`text-xl font-semibold mb-2 transition-colors duration-300 ${isHovered ? 'gradient-text' : 'text-white'}`}>
+      <h3 className="text-xl font-semibold text-white mb-2">
         {prompt.title}
       </h3>
 
-      <p className="text-slate-300 mb-4 transition-opacity duration-300">
+      <p className="text-slate-300 mb-4">
         {prompt.description}
       </p>
 
-      {/* Prompt content */}
-      <div className="bg-slate-900/50 p-4 rounded-lg mb-4 backdrop-blur-sm border border-slate-800/50 group">
-        <p className="text-slate-200 whitespace-pre-wrap font-mono text-sm">
+      <div className="bg-slate-900 p-4 rounded-md mb-4">
+        <pre className="text-slate-200 font-mono text-sm whitespace-pre-wrap">
           {prompt.prompt}
-        </p>
+        </pre>
       </div>
 
-      {/* Footer */}
       <div className="flex justify-between items-center">
-        <span className="text-sm text-slate-400 flex items-center gap-2">
-          <span className="text-slate-500">by</span> {prompt.author}
+        <span className="text-sm text-slate-400">
+          by <span className="text-slate-300">{prompt.author}</span>
         </span>
+        
         <button
           onClick={copyToClipboard}
-          className={`primary-button flex items-center gap-2 ${copying ? 'animate-shake' : ''}`}
-          disabled={copying}
+          className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300
+            ${copied 
+              ? 'bg-green-500/10 text-green-400 animate-shake' 
+              : 'bg-blue-500/10 text-blue-400 hover:bg-blue-500/20'
+            }`}
         >
           {copied ? (
             <>
@@ -87,7 +66,7 @@ const PromptCard: React.FC<PromptCardProps> = ({ prompt, index }) => {
           ) : (
             <>
               <Copy className="h-4 w-4" />
-              <span>Copy Prompt</span>
+              <span>Copy</span>
             </>
           )}
         </button>

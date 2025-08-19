@@ -9,7 +9,6 @@ import promptsData from '@/data/prompts.json';
 import { Prompt } from '@/types/prompt';
 
 const HomePage = () => {
-  const [prompts, setPrompts] = useState<Prompt[]>(promptsData);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [mounted, setMounted] = useState(false);
@@ -18,23 +17,21 @@ const HomePage = () => {
     setMounted(true);
   }, []);
 
-  useEffect(() => {
-    const filteredPrompts = promptsData.filter(prompt => {
-      const matchesSearch = 
-        prompt.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        prompt.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        prompt.prompt.toLowerCase().includes(searchTerm.toLowerCase());
-      
-      const matchesCategory = 
-        !selectedCategory || prompt.category.toLowerCase() === selectedCategory.toLowerCase();
-      
-      return matchesSearch && matchesCategory;
-    });
-    setPrompts(filteredPrompts);
-  }, [searchTerm, selectedCategory]);
+  // Filter prompts based on search term and category
+  const filteredPrompts = promptsData.filter(prompt => {
+    const matchesSearch = searchTerm === '' || 
+      prompt.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      prompt.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      prompt.prompt.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    const matchesCategory = 
+      !selectedCategory || prompt.category.toLowerCase() === selectedCategory.toLowerCase();
+    
+    return matchesSearch && matchesCategory;
+  });
 
   return (
-    <div className="min-h-screen bg-slate-900 px-4 py-8">
+    <div className="min-h-screen bg-slate-900 px-4 pt-24 pb-8">
       <div className={`max-w-7xl mx-auto transition-all duration-500 ${
         mounted ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
       }`}>
@@ -62,13 +59,13 @@ const HomePage = () => {
         {/* Results count */}
         <div className="mb-8 text-center">
           <p className="text-slate-400">
-            Showing <span className="text-white font-medium">{prompts.length}</span> prompts
+            Showing <span className="text-white font-medium">{filteredPrompts.length}</span> prompts
           </p>
         </div>
 
         {/* Prompt Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {prompts.map((prompt, index) => (
+          {filteredPrompts.map((prompt, index) => (
             <PromptCard 
               key={prompt.id} 
               prompt={prompt} 
@@ -78,7 +75,7 @@ const HomePage = () => {
         </div>
 
         {/* Empty State */}
-        {prompts.length === 0 && (
+        {filteredPrompts.length === 0 && (
           <div className="text-center py-12">
             <p className="text-slate-400 text-lg">
               No prompts found matching your criteria. Try adjusting your search or filters.
